@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+import { useContext } from "react";
+import { UserContext } from "./context/UserContect";
+import Home from "./page/Home/Home";
+import LoginAndSign from "./page/LoginRegister/LoginAndSign";
+import Loading from "./components/Loading/Loading";
 
 function App() {
-  return (
+  const { currentUser, loading } = useContext(UserContext);
+   return(
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      {
+        loading ? <Loading/> :       !currentUser ? <LoginAndSign /> : <Home/>
+
+      }
+      </div>
+   )
 }
 
 export default App;

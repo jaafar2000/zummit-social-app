@@ -1,0 +1,96 @@
+.header {
+  background-color: #292929;
+  color: white;
+  padding: 1.5rem;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container .LoginForm {
+  display: flex;
+  gap: 10px;
+}
+.LoginForm {
+  position: relative;
+}
+.msgErr {
+  position: absolute;
+  bottom: -50px;
+  color: red;
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+.LoginForm input {
+  padding: 0.3rem 0 0.3rem 1rem;
+  border: none;
+  outline: none;
+  background-color: #444444;
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 0.2rem;
+}
+.LoginForm input:focus {
+  color: #ffff;
+}
+
+.LoginForm button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+.LoginForm button:hover {
+  cursor: pointer;
+
+  opacity: 0.9;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.options img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.options i {
+  font-size: 1.5rem;
+}
+
+.options button {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  transition: ease-in-out all 0.2s;
+}
+.options button:hover,
+.options i:hover,
+.options img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.options .create_post {
+  background-color: #28a745;
+  color: #fff;
+}
+.options .sign_out {
+  background-color: gray;
+  color: #fff;
+}
+a {
+  color: #fff;
+}

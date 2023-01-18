@@ -1,0 +1,46 @@
+.feed_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.No_post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 70%;
+  margin: auto;
+  height: 70vh;
+}
+
+.No_post h1,
+.users h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.No_post p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 100;
+  opacity: 0.7;
+}
+
+.l_post {
+  margin: auto;
+  width: fit-content;
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: 200;
+}
+.users ul {
+  margin-top: 1rem;
+  width: 300px;
+}
+

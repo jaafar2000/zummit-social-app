@@ -1,0 +1,68 @@
+.Login__signin_body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+  gap: 2rem;
+}
+
+.Login__signin_body .left_side {
+  width: 60%;
+}
+.Login__signin_body .left_side p:nth-child(1) {
+  font-size: 5.3rem;
+  word-wrap: normal;
+  font-weight: 100;
+}
+.Login__signin_body .left_side p:nth-child(2) {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+  opacity: 0.7;
+  line-height: 2.5rem;
+}
+.right_side {
+  width: 40%;
+}
+.right_side .SignUp_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.right_side .SignUp_form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  font-weight: 100;
+  width: 100%;
+}
+.right_side .SignUp_form > div label {
+  margin-bottom: 0.5rem;
+}
+.right_side .SignUp_form > div input {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border-color: rgba(128, 128, 128, 0.384);
+  outline: none;
+}
+.right_side .SignUp_form > button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: all ease-in-out 0.2s;
+  background-color: #28a745;
+  border-radius: 5px;
+}
+
+.right_side .SignUp_form > button:hover {
+  opacity: 0.8;
+  transform: scale(1.04);
+  cursor: pointer;
+}
