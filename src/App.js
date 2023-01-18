@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import { useContext } from "react";
 import { UserContext } from "./context/UserContect";
 import Home from "./page/Home/Home";
@@ -7,15 +7,11 @@ import Loading from "./components/Loading/Loading";
 
 function App() {
   const { currentUser, loading } = useContext(UserContext);
-   return(
-
+  return (
     <div className="App">
-      {
-        loading ? <Loading/> :       !currentUser ? <LoginAndSign /> : <Home/>
-
-      }
-      </div>
-   )
+      {loading ? <Loading /> : !currentUser ? <LoginAndSign /> : <Home />}
+    </div>
+  );
 }
 
 export default App;
