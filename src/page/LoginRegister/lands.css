@@ -66,3 +66,51 @@
   transform: scale(1.04);
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  .Login__signin_body .left_side {
+    margin-left: 2rem;
+  }
+  .Login__signin_body .left_side p:nth-child(2) {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .Login__signin_body .left_side p:nth-child(1) {
+    font-size: 2.3rem;
+  }
+  .right_side .SignUp_form > div label {
+    font-size: 1rem;
+  }
+  .right_side .SignUp_form > div input {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .right_side .SignUp_form > button {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .right_side .SignUp_form {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Login__signin_body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .Login__signin_body .left_side {
+    margin-left: 1rem;
+  }
+  .Login__signin_body .left_side p:nth-child(2) {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .Login__signin_body .left_side p:nth-child(1) {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .right_side {
+    width: 90%;
+    margin-left: 1rem;
+    padding-bottom: 2rem;
+  }
+}

@@ -94,3 +94,119 @@
 a {
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 0.5rem;
+  }
+  .LoginForm {
+    padding-right: 1rem;
+  }
+  .LoginForm input {
+    font-size: 1rem;
+    padding: 0.1rem 0 0.1rem 0.5rem;
+  }
+  .LoginForm button {
+    font-size: 1rem;
+  }
+  .options {
+    gap: 10px;
+  }
+  .options button {
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+  .options img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header {
+    padding: 0.5rem 0.2rem;
+  }
+  .LoginForm {
+    padding-right: 0.5rem;
+  }
+  .LoginForm input {
+    font-size: 0.8rem;
+    padding: 0.1rem 0 0.1rem 0.5rem;
+  }
+  .LoginForm button {
+    font-size: 0.8rem;
+  }
+  .options {
+    gap: 7px;
+  }
+  .options button {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+  .options img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (max-width: 512px) {
+  .header {
+    padding: 0.1rem 0;
+  }
+  .header .Logo {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  .LoginForm {
+    padding-right: 0;
+  }
+  .LoginForm input {
+    font-size: 0.6rem;
+    padding: 0 0 0 0.5rem;
+  }
+  .LoginForm button {
+    font-size: 0.6rem;
+  }
+  .options {
+    gap: 4px;
+  }
+  .options button {
+    padding: 0.1rem;
+    font-size: 0.6rem;
+  }
+  .options img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* position: relative; */
+  }
+  .LoginForm {
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    top: 0;
+    margin-bottom: 1rem;
+    /* margin: 1rem 0 1rem 3rem; */
+  }
+  .LoginForm input {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .options {
+    width: 100%;
+  }
+  .options button {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .options img {
+    height: 40px;
+    width: 40px;
+  }
+  .header .Logo {
+    font-size: 1.5rem;
+  }
+}

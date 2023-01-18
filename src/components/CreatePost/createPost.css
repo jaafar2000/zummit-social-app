@@ -66,3 +66,21 @@ textarea:focus {
 .disabled_btn:hover {
   cursor: not-allowed;
 }
+@media screen and (max-width: 767px) {
+  .Create_post form > div:nth-child(2) textarea {
+    font-size: 1rem;
+    height: 200px;
+  }
+  .Create_post form > div label {
+    font-size: 1rem;
+  }
+  .Create_post form > div input {
+    font-size: 1rem;
+  }
+  .Create_post form > div {
+    margin-bottom: 1rem;
+  }
+  .Create_post button {
+    font-size: 1rem;
+  }
+}

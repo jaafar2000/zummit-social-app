@@ -1,5 +1,5 @@
 .profile {
-  width: 800px;
+  /* width: 800px; */
   margin: auto;
   margin-top: 3rem;
 }
@@ -33,7 +33,6 @@
 .profile_header .edit_img {
   position: relative;
   cursor: pointer;
-
 }
 
 .profile_header .edit_img span {
@@ -43,7 +42,7 @@
   top: 100%;
   left: 0;
   padding: 0.3rem;
-  background-color: #007bff;  
+  background-color: #007bff;
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -53,24 +52,21 @@
   visibility: hidden;
   transition: all ease-in-out 0.3s;
 }
-.edit_img:hover span{
+.edit_img:hover span {
   visibility: visible;
 }
 .MuiBox-root {
   display: contents !important;
 }
 
-
 .MuiButtonBase-root {
   font-size: 2rem !important;
   margin-right: 2rem !important;
   text-transform: capitalize !important;
-
 }
 
-.Mui-selected{
-  color:#007bff  !important;
-
+.Mui-selected {
+  color: #007bff !important;
 }
 .MuiTabs-indicator {
   background-color: #007bff !important;
@@ -151,4 +147,58 @@
 }
 .upload_photo div button:nth-of-type(2) {
   background-color: rgb(211, 22, 22);
+}
+@media screen and (max-width: 767px) {
+  .profile_header .profileImg {
+    margin-right: 0.5rem;
+    width: 150px;
+    height: 150px;
+  }
+  .profile_header span:nth-of-type(1) {
+    font-size: 2.5rem;
+  }
+  .profile_header span:nth-of-type(2) {
+    font-size: 1rem;
+  }
+  .profile_header .edit_img span {
+    font-size: 1rem;
+  }
+  .MuiTab-root {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .profile_header .profileImg {
+    margin-right: 0.2rem;
+    width: 100px;
+    height: 100px;
+  }
+  .profile_header span:nth-of-type(1) {
+    font-size: 1.5rem;
+  }
+  .profile_header span:nth-of-type(2) {
+    font-size: 0.8rem;
+  }
+  .profile_header .edit_img span {
+    font-size: 0.8rem;
+  }
+  .MuiTab-root {
+    width: 80px;
+  }
+  .MuiTab-wrapper {
+    font-size: 1rem;
+  }
+  .follow button {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+  .chat_btn {
+    width: 111px;
+    font-size: 0.9rem;
+  }
+  .profile_header .edit_img span {
+    font-size: 0.5rem;
+    width: 100px;
+  }
 }
