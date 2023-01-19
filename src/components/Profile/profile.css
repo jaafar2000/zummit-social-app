@@ -151,11 +151,17 @@
 @media screen and (max-width: 767px) {
   .profile_header .profileImg {
     margin-right: 0.5rem;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+  }
+  .profile_nav{
+    padding: 0 2rem;
   }
   .profile_header span:nth-of-type(1) {
     font-size: 2.5rem;
+  }
+  .MuiButtonBase-root{
+    font-size: 1rem !important;
   }
   .profile_header span:nth-of-type(2) {
     font-size: 1rem;

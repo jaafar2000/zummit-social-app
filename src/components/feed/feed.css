@@ -111,6 +111,10 @@
   }
   .users {
     width: 100%;
+    margin-top: 2rem;
+  }
+  .users h1 {
+    margin-left: 2rem;
   }
   .users ul {
     width: 100%;
@@ -120,6 +124,7 @@
     flex-direction: row;
     height: fit-content;
     border-radius: 0;
+    box-shadow: none;
   }
 
   .users ul::-webkit-scrollbar {

@@ -273,8 +273,8 @@ const Profile = () => {
                   aria-label="lab API tabs example"
                 >
                   <Tab label="Posts" value="1" />
-                  <Tab label="Followers" value="2" />
-                  <Tab label="Following" value="3" />
+                  <Tab label={`Followers: ${follower.length}`} value="2" />
+                  <Tab label={`Followers: ${following.length}`}  value="3" />
                 </TabList>
               </Box>
               <TabPanel value="1">
