@@ -5,14 +5,16 @@
   gap: 2rem;
   width: 80%;
   margin: auto;
+  height: 87.5vh;
 }
 
 .No_post {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   max-width: 70%;
+  text-align: center;
   margin: auto;
   height: 70vh;
 }
@@ -39,9 +41,31 @@
   font-size: 3.5rem;
   font-weight: 200;
 }
+
 .users ul {
   margin-top: 1rem;
   width: 300px;
+  max-height: 40vh;
+  overflow: scroll;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.9rem;
+  overflow-x: hidden;
+  box-shadow: rgba(0, 0, 0, 0.116) 0px -50px 36px -28px inset;
+}
+
+.users ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+.users ul::-webkit-scrollbar-track {
+  background-color: #e8e8ee;
+}
+
+.users ul::-webkit-scrollbar-thumb {
+  background-color: #222121;
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 767px) {
@@ -56,6 +80,7 @@
   }
   .No_post {
     width: 400px;
+    font-size: 1rem;
   }
   .singleUser {
     flex-direction: column;
@@ -64,11 +89,7 @@
     margin: 0.3rem;
     padding: 0.4rem;
   }
-  .users ul {
-    width: 200px;
-    height: 300px;
-    overflow: scroll;
-  }
+
   .No_post h1,
   .users h1 {
     font-size: 1.5rem;
@@ -82,12 +103,27 @@
 @media screen and (max-width: 620px) {
   .feed_container {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    background-color: #eee;
+  }
+  .feed {
+    width: 100%;
+  }
+  .users {
+    width: 100%;
   }
   .users ul {
+    width: 100%;
+    margin: 0 1rem;
+    overflow-x: scroll;
     display: flex;
+    flex-direction: row;
     height: fit-content;
-    width: 375px;
+    border-radius: 0;
+  }
+
+  .users ul::-webkit-scrollbar {
+    height: 5px;
   }
   .l_post {
     margin-top: 0rem;
