@@ -12,7 +12,7 @@ import {
 
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 const Search = () => {
 
   const [username, setUsername] = useState("");

@@ -4,7 +4,7 @@ import avatar from "../../assets/profileImg.png";
 import { BiTrash } from "react-icons/bi";
 import { db } from "../../firebase";
 import { doc, deleteDoc } from "firebase/firestore";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 const Post = ({ id, title, content, email, photoURL, time, username }) => {
   const { currentUser } = useContext(UserContext);
   const DeletePost = (id) => {

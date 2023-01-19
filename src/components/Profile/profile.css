@@ -148,6 +148,8 @@
 .upload_photo div button:nth-of-type(2) {
   background-color: rgb(211, 22, 22);
 }
+
+
 @media screen and (max-width: 767px) {
   .profile_header .profileImg {
     margin-right: 0.5rem;
@@ -161,7 +163,8 @@
     font-size: 2.5rem;
   }
   .MuiButtonBase-root{
-    font-size: 1rem !important;
+    font-size: 0.7rem !important;
+
   }
   .profile_header span:nth-of-type(2) {
     font-size: 1rem;
@@ -190,10 +193,10 @@
     font-size: 0.8rem;
   }
   .MuiTab-root {
-    width: 80px;
+    width: 110px !important;
   }
   .MuiTab-wrapper {
-    font-size: 1rem;
+    font-size: 0.6rem !important;
   }
   .follow button {
     width: 100px;

@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React from "react";
 import Header from "../../components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import Feed from "../../components/feed/Feed";

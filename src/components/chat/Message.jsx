@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import { ChatContext } from "../../context/ChatContext";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
@@ -23,7 +23,7 @@ const Message = ({ message }) => {
   return (
     <div
     ref={ref}
-    className={`message ${message.senderId == currentUser?.uid && "owner"}`}
+    className={`message ${message.senderId === currentUser?.uid && "owner"}`}
   >
     <div className="messageInfo">
       <img

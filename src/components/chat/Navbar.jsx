@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { UserContext } from '../../context/UserContect'
+import { UserContext } from '../../context/UserContext'
 import {RiWechatFill} from "react-icons/ri"
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import { ChatContext } from "../../context/ChatContext";
 import {
   arrayUnion,
@@ -91,7 +91,7 @@ const Input = () => {
               <RiAttachment2 style={{ color: "#fff" }} />
             </i>
             {img && (
-              <img className="img_tosend" src={URL.createObjectURL(img)} />
+              <img className="img_tosend" alt="img" src={URL.createObjectURL(img)} />
             )}
           </label>
           <button>

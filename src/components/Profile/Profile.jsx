@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import profileImg from "../../assets/profileImg.png";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage, db } from "../../firebase";
@@ -63,7 +63,7 @@ const Profile = () => {
     } catch (err) {
       console.log("err");
     }
-  }, [id, db, posts]);
+  }, [id, user, posts]);
 
   // fetching users
   useEffect(() => {
@@ -86,14 +86,14 @@ const Profile = () => {
     onSnapshot(colRef, (snapshot) => {
       setFollower(snapshot.docs);
     });
-  }, []);
+  }, [id]);
   // fetching following
   useEffect(() => {
     const colRef = collection(db, "users", id, "following");
     onSnapshot(colRef, (snapshot) => {
       setFollowing(snapshot.docs);
     });
-  }, []);
+  }, [id]);
   // checking if follow or not
   useEffect(
     () =>
@@ -101,7 +101,7 @@ const Profile = () => {
         follower.findIndex((follower) => follower.id === currentUser?.uid) !==
           -1
       ),
-    [follower]
+    [follower, currentUser?.uid]
   );
   // handle select on for chat button to crete a chat with the decided user
   const handleSelect = async () => {
@@ -247,6 +247,7 @@ const Profile = () => {
                 {profileImage && (
                   <div className="upload_photo">
                     <img
+                      alt="profile img"
                       className="image"
                       src={URL.createObjectURL(profileImage)}
                     />
@@ -274,7 +275,7 @@ const Profile = () => {
                 >
                   <Tab label="Posts" value="1" />
                   <Tab label={`Followers: ${follower.length}`} value="2" />
-                  <Tab label={`Followers: ${following.length}`}  value="3" />
+                  <Tab label={`Following: ${following.length}`} value="3" />
                 </TabList>
               </Box>
               <TabPanel value="1">
@@ -291,7 +292,7 @@ const Profile = () => {
                     />
                   ))}
                   <div className="NoPost">
-                    {profilePost.length == 0 && <p>No post to show </p>}
+                    {profilePost.length === 0 && <p>No post to show </p>}
                   </div>
                 </div>
               </TabPanel>

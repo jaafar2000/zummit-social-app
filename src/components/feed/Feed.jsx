@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import { db } from "../../firebase";
 import { Link } from "react-router-dom";
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
@@ -25,7 +25,7 @@ const Feed = () => {
       setPosts(snapshot.docs);
       setLoading(false);
     });
-  }, [db, posts]);
+  }, [ posts]);
 
   // fetching users
   useEffect(() => {
@@ -33,7 +33,7 @@ const Feed = () => {
     onSnapshot(userRef, (snapshot) => {
       setUsers(snapshot.docs.map((doc) => doc.data()));
     });
-  }, [db, users]);
+  }, [ users]);
 
   // fetch following people
   useEffect(() => {
@@ -41,17 +41,17 @@ const Feed = () => {
     onSnapshot(colRef, (snapshot) => {
       setFollowingUsers(snapshot.docs);
     });
-  }, []);
+  }, [currentUser?.uid]);
   // filtering post to show only the post from the following people
   useEffect(() => {
     const newPostFeed = posts.filter((post) => {
       return followingUsers.find((user) => {
-        return post?.data()?.username == user?.data()?.username;
+        return post?.data()?.username === user?.data()?.username;
       });
     });
 
     setFeedPost(newPostFeed);
-  }, [followingUsers]);
+  }, [followingUsers, posts ]);
   if (loading) return <Loading />;
   return (
     <div className="container feed_container">
@@ -71,7 +71,7 @@ const Feed = () => {
       </div>
       {
         <div className="feed">
-          {feedPost.length == 0 ? (
+          {feedPost.length === 0 ? (
             <div className="No_post">
               <h1>Hello {currentUser?.displayName}, your feed is empty </h1>
               <p>

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import profileImg from "../../assets/profileImg.png";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import { AiFillHome } from "react-icons/ai";
 import { BsChatFill } from "react-icons/bs";
 import { Link } from "react-router-dom";

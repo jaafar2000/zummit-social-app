@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
-import { UserContext } from "../../context/UserContect";
+import { UserContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 import "./createPost.css";

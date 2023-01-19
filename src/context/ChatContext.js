@@ -3,7 +3,7 @@ import {
   useContext,
   useReducer,
 } from "react";
-import { UserContext } from "./UserContect";
+import { UserContext } from "./UserContext";
 
 export const ChatContext = createContext();
 
