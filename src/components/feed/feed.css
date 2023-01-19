@@ -108,8 +108,22 @@
     line-height: 1.5;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .post {
-    width: 20rem;
+    width: 15rem;
+  }
+  .No_post {
+    /* display: block; */
+    /* max-width: 100%; */
+    width: 300px;
+  }
+  .No_post h1,
+  .users h1 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .No_post p {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }

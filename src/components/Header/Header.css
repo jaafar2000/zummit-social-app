@@ -176,7 +176,7 @@ a {
     width: 30px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .header .container {
     flex-direction: column;
     align-items: flex-start;

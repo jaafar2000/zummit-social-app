@@ -168,7 +168,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .profile_header .profileImg {
     margin-right: 0.2rem;
     width: 100px;
